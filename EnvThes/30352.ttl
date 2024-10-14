@@ -23,6 +23,15 @@ iadopt:hasProperty
   rdfs:comment "A Variable has a Property that characterizes an Entity." ;
   rdfs:label "hasProperty" .
 
+envthes:
+  skos:prefLabel "EnvThes"@en ;
+  a owl:Ontology, skos:ConceptScheme .
+
+envthes:30365
+  skos:prefLabel "ground"@en ;
+  a skos:Concept ;
+  iadopt:constrains envthes:30352 .
+
 iadopt:hasObjectOfInterest
   rdfs:comment "A Variable has an Entity whose Property is observed." ;
   rdfs:label "hasObjectOfInterest" .
@@ -32,20 +41,17 @@ envthes:21519
   a skos:Concept .
 
 envthes:30352
-  iadopt:hasContextObject envthes:21922 ;
-  a iadopt:Variable ;
   iadopt:hasProperty envthes:21519 ;
+  dc:modified "2024-10-14"^^xsd:date ;
+  skos:inScheme envthes: ;
   iadopt:hasObjectOfInterest envthes:20918 ;
-  skos:broader envthes:20935 ;
-  dc:modified "2024-06-07"^^xsd:date ;
+  iadopt:hasConstraint envthes:30365 ;
+  skos:prefLabel "ice cover"@en ;
+  dc:creator <https://orcid.org/0000-0003-2195-3997> ;
+  a skos:Concept, iadopt:Variable ;
   dc:created "2024-06-07"^^xsd:date ;
-  skos:prefLabel "ice cover"@en .
+  skos:broader envthes:20935 .
 
-envthes:21922
-  skos:prefLabel "vesikehä, hydrosfääri"@fi, "hydrosfera"@pl, "hydrosféra"@sk, "hydrosféra"@cs, "hidrosferă"@ro, "hidrosfera"@sl, "hidrosfera"@pt, "hidrosfera"@lt, "hidrosfera"@hr, "hidrosfera"@es, "idrosfera"@it, "hydrosphère"@fr, "hidrosfēra"@lv, "Хидросфера"@bg, "المحيط المائي - الغلاف المائي للأرض"@ar, "υδρόσφαιρα"@el, "hidroszféra"@hu, "hydrosfære"@no, "hydrosfære"@da, "hydrosfär"@sv, "Hydrosphäre"@de, "hüdrosfäär"@et, "hydrosphere"@en, "hydrosfeer"@nl ;
-  a skos:Concept .
-
-iadopt:hasContextObject
-  rdfs:comment "A Variable has an Entity that provides additional background information regarding the ObjectOfInterest." ;
-  rdfs:label "hasContextObject" .
-
+iadopt:hasConstraint
+  rdfs:comment "A Variable has a Constraint, that confines an Entity involved in the observation." ;
+  rdfs:label "hasConstraint" .
