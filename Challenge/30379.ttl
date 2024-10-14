@@ -8,8 +8,7 @@
 
 envthes:30364
   skos:prefLabel "affected by fire"@en ;
-  a skos:Concept ;
-  iadopt:constrains envthes:30379 .
+  a skos:Concept .
 
 envthes:20935
   skos:prefLabel "variable"@en ;
@@ -32,21 +31,16 @@ iadopt:hasObjectOfInterest
   rdfs:comment "A Variable has an Entity whose Property is observed." ;
   rdfs:label "hasObjectOfInterest" .
 
-envthes:30346
-  skos:prefLabel "stagnant"@en ;
-  a iadopt:Constraint, skos:Concept ;
-  iadopt:constrains <http://purl.jp/bio/4/id/200906090403689217> ;
-
 envthes:30379
   skos:altLabel "height of tree trunk affected by fire"@en ;
   dc:created "2024-10-14"^^xsd:date ;
-  skos:definition "Height of char imprinted on a tree trunk by fire as measured from the base of the tree trunk to the highest vertical extent using a 360° sweep at each sampling location."@en ;
-  skos:prefLabel "tree trunk char height"@en ;
   iadopt:hasConstraint envthes:30364 ;
   a iadopt:Variable, skos:Concept ;
+  skos:prefLabel "tree trunk char height"@en ;
   skos:exactMatch <https://linked.data.gov.au/def/nrm/3a2b344c-07b5-4536-8db3-06b73bc0e263> ;
   dc:source <https://linked.data.gov.au/def/nrm/3a2b344c-07b5-4536-8db3-06b73bc0e263> ;
   skos:broader envthes:20935 ;
+  skos:definition "Height of char imprinted on a tree trunk by fire as measured from the base of the tree trunk to the highest vertical extent using a 360° sweep at each sampling location."@en ;
   iadopt:hasProperty <http://www.ontology-of-units-of-measure.org/resource/om-2/Height> ;
   skos:inScheme envthes: ;
   iadopt:hasObjectOfInterest <http://purl.jp/bio/4/id/200906090403689217> ;
