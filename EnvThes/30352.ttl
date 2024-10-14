@@ -6,18 +6,6 @@
 @prefix dc: <http://purl.org/dc/terms/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-envthes:30352
-  iadopt:hasProperty envthes:21519 ;
-  dc:modified "2024-10-14"^^xsd:date ;
-  skos:inScheme envthes: ;
-  iadopt:hasObjectOfInterest envthes:20918 ;
-  iadopt:hasConstraint envthes:30365 ;
-  skos:prefLabel "ice cover"@en ;
-  dc:creator <https://orcid.org/0000-0003-2195-3997> ;
-  a skos:Concept, iadopt:Variable ;
-  dc:created "2024-06-07"^^xsd:date ;
-  skos:broader envthes:20935 .
-
 envthes:20935
   skos:prefLabel "variable"@en ;
   a skos:Concept ;
@@ -34,6 +22,11 @@ iadopt:Variable
 iadopt:hasProperty
   rdfs:comment "A Variable has a Property that characterizes an Entity." ;
   rdfs:label "hasProperty" .
+
+iadopt:hasMatrix
+  rdfs:subPropertyOf iadopt:hasContextObject ;
+  rdfs:comment "A Variable might have an Entity in which the ObjectOfInterest is contained." ;
+  rdfs:label "hasMatrix" .
 
 envthes:
   skos:prefLabel "EnvThes"@en ;
@@ -52,6 +45,14 @@ envthes:21519
   skos:prefLabel "cover"@en ;
   a skos:Concept .
 
-iadopt:hasConstraint
-  rdfs:comment "A Variable has a Constraint, that confines an Entity involved in the observation." ;
-  rdfs:label "hasConstraint" .
+envthes:30352
+  iadopt:hasProperty envthes:21519 ;
+  iadopt:hasMatrix envthes:30365 ;
+  dc:modified "2024-10-14"^^xsd:date ;
+  skos:inScheme envthes: ;
+  skos:prefLabel "ice cover"@en ;
+  iadopt:hasObjectOfInterest envthes:20918 ;
+  dc:creator <https://orcid.org/0000-0003-2195-3997> ;
+  a skos:Concept, iadopt:Variable ;
+  dc:created "2024-06-07"^^xsd:date ;
+  skos:broader envthes:20935 .
