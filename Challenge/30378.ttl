@@ -16,12 +16,12 @@ envthes:30378
   skos:prefLabel "cloud cover"@en ;
   skos:altLabel "area fraction of sky covered by clouds"@en ;
   dc:created "2024-10-14"^^xsd:date ;
+  iadopt:hasMatrix envthes:30363 ;
   iadopt:hasObjectOfInterest <https://vocabulary.actris.nilu.no/actris_vocab/cloud> ;
   skos:inScheme envthes: ;
   a skos:Concept, iadopt:Variable ;
   dc:modified "2024-10-14"^^xsd:date ;
   dc:source <https://community.wmo.int/en/governance/commission-membership/commission-observation-infrastructure-and-information-systems-infcom/standing-committee-information-management-and-technology-sc-imt/expert-team-metadata-standards-et-metadata/task-team-wigos-metadata-tt-wigosmd> ;
-  iadopt:hasMatrix "et30363"@en ;
   iadopt:hasProperty <http://www.ontology-of-units-of-measure.org/resource/om-2/AreaFraction> ;
   skos:broader envthes:20935 .
 
@@ -45,3 +45,7 @@ envthes:
 iadopt:hasObjectOfInterest
   rdfs:comment "A Variable has an Entity whose Property is observed." ;
   rdfs:label "hasObjectOfInterest" .
+
+envthes:30363
+  skos:prefLabel "sky"@en ;
+  a skos:Concept .
