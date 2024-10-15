@@ -50,8 +50,9 @@ for await(const rawFilePath of Fs.glob( '**/*.ttl', { cwd: PATH_ROOT} ) ) {
 
   // parse
   const raw = await Fs.readFile( Path.join( PATH_ROOT, rawFilePath ), 'utf8' );
+  let store;
   try {
-    const store = await parseRDF( raw );
+    store = await parseRDF( raw );
   } catch {
     console.warn( `File "${rawFilePath}" can not be parsed!` );
     continue;
