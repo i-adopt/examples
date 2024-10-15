@@ -50,7 +50,12 @@ for await(const rawFilePath of Fs.glob( '**/*.ttl', { cwd: PATH_ROOT} ) ) {
 
   // parse
   const raw = await Fs.readFile( Path.join( PATH_ROOT, rawFilePath ), 'utf8' );
-  const store = await parseRDF( raw );
+  try {
+    const store = await parseRDF( raw );
+  } catch {
+    console.warn( `File "${rawFilePath}" can not be parsed!` );
+    continue;
+  }
 
   // prepare container for infos
   const pathComponents = rawFilePath.split( Path.sep );
