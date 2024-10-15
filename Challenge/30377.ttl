@@ -54,7 +54,6 @@ envthes:30375
   skos:prefLabel "1.7 meter above ground"@en ;
   a iadopt:Constraint, skos:Concept ;
   iadopt:constrains envthes:23 .
-.
 
 envthes:23
   skos:prefLabel "αέρας"@el, "oras"@lt, "vzduch"@sk, "vzduch"@cs, "ilma"@fi, "õhk"@et, "ar"@pt, "air"@fr, "air"@en, "luft"@sv, "luft"@no, "luft"@da, "powietrze"@pl, "هواء"@ar, "Luft"@de, "Въздух"@bg, "lucht"@nl, "aer"@ro, "aire"@es, "zrak"@sl, "zrak"@hr, "aria"@it, "levegő"@hu, "gaiss"@lv ;
