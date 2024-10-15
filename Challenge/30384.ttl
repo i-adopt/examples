@@ -42,7 +42,7 @@ iadopt:hasObjectOfInterest
 
 envthes:30366
   skos:prefLabel "feral-free"@en ;
-  a iadopt:Constraint, skos:Concept
+  a iadopt:Constraint, skos:Concept ;
   iadopt:constrains <http://opendata.inrae.fr/thesaurusINRAE/c_1152> .
 
 iadopt:hasConstraint
