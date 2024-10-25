@@ -35,7 +35,7 @@ envthes:30377
   iadopt:hasProperty <http://qudt.org/vocab/quantitykind/Temperature> ;
   skos:definition "Temperature of the air in a height of 1.7 meter"@en ;
   iadopt:hasConstraint envthes:30375 ;
-  iadopt:hasMatrix <http://vocab.nerc.ac.uk/collection/P38/current/troposphere/> ;
+  iadopt:hasMatrix <https://vocabulary.actris.nilu.no/actris_vocab/troposphere> ;
   skos:broader envthes:30333 ;
   iadopt:hasObjectOfInterest envthes:23 ;
   a iadopt:Variable, skos:Concept ;
