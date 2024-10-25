@@ -5,11 +5,16 @@
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix dc: <http://purl.org/dc/terms/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix ark: <http://data.loterre.fr/ark:/> .
 
 envthes:20935
   skos:prefLabel "variable"@en ;
   a skos:Concept ;
   skos:narrower envthes:30376 .
+
+ark:67375/26L-ZTJ994X8-D
+  skos:prefLable "solar wind"en ;
+  a skos:Concept .
 
 iadopt:Variable
   rdfs:label "Variable" ;
