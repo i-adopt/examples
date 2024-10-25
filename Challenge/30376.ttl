@@ -5,14 +5,13 @@
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix dc: <http://purl.org/dc/terms/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix ark: <http://data.loterre.fr/ark:/> .
 
 envthes:20935
   skos:prefLabel "variable"@en ;
   a skos:Concept ;
   skos:narrower envthes:30376 .
 
-ark:67375/26L-ZTJ994X8-D
+<http://data.loterre.fr/ark:/67375/26L-ZTJ994X8-D>
   skos:prefLabel "solar wind"@en ;
   a skos:Concept .
 
@@ -39,7 +38,7 @@ envthes:30376
   a iadopt:Variable, skos:Concept ;
   skos:definition "Stream of charged particles emitted by the sun and measured in the solar wind."@en ;
   dc:modified "2024-10-14"^^xsd:date ;
-  iadopt:hasMatrix ark:67375/26L-ZTJ994X8-D ;
+  iadopt:hasMatrix <http://data.loterre.fr/ark:/67375/26L-ZTJ994X8-D> ;
   skos:prefLabel "electron density in the solar wind"@en ;
   iadopt:hasObjectOfInterest <http://purl.obolibrary.org/obo/CHEBI_10545> ;
   dc:created "2024-10-14"^^xsd:date ;
