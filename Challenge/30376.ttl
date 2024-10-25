@@ -39,7 +39,7 @@ envthes:30376
   a iadopt:Variable, skos:Concept ;
   skos:definition "Stream of charged particles emitted by the sun and measured in the solar wind."@en ;
   dc:modified "2024-10-14"^^xsd:date ;
-  iadopt:hasMatrix ark:/67375/26L-ZTJ994X8-D ;
+  iadopt:hasMatrix ark:67375/26L-ZTJ994X8-D ;
   skos:prefLabel "electron density in the solar wind"@en ;
   iadopt:hasObjectOfInterest <http://purl.obolibrary.org/obo/CHEBI_10545> ;
   dc:created "2024-10-14"^^xsd:date ;
