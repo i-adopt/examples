@@ -13,7 +13,7 @@ envthes:20935
   skos:narrower envthes:30376 .
 
 ark:67375/26L-ZTJ994X8-D
-  skos:prefLable "solar wind"en ;
+  skos:prefLabel "solar wind"@en ;
   a skos:Concept .
 
 iadopt:Variable
