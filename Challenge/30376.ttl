@@ -15,6 +15,10 @@ envthes:20935
   skos:prefLabel "solar wind"@en ;
   a skos:Concept .
 
+<http://purl.obolibrary.org/obo/CHEBI_10545>
+  skos:prefLabel "electron"@en ;
+  a skos:Concept .
+
 iadopt:Variable
   rdfs:label "Variable" ;
   a owl:Class .
