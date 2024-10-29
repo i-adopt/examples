@@ -31,10 +31,18 @@ iadopt:hasObjectOfInterest
   rdfs:comment "A Variable has an Entity whose Property is observed." ;
   rdfs:label "hasObjectOfInterest" .
 
+<http://opendata.inrae.fr/thesaurusINRAE/c_6419>
+  skos:prefLabel "tree trunk"@en ;
+  a skos:Concept .
+
+<http://purl.dataone.org/odo/ECSO_00000501>
+  skos:prefLabel "tree"@en ;
+  a skos:Concept .
+
 envthes:30364
   skos:prefLabel "affected by fire"@en ;
   a iadopt:Constraint, skos:Concept ;
-  iadopt:constrains <http://purl.jp/bio/4/id/200906090403689217> .
+  iadopt:constrains <http://opendata.inrae.fr/thesaurusINRAE/c_6419> .
 
 envthes:30379
   skos:altLabel "height of tree trunk affected by fire"@en ;
@@ -48,7 +56,8 @@ envthes:30379
   skos:definition "Height of char imprinted on a tree trunk by fire as measured from the base of the tree trunk to the highest vertical extent using a 360° sweep at each sampling location."@en ;
   iadopt:hasProperty <http://www.ontology-of-units-of-measure.org/resource/om-2/Height> ;
   skos:inScheme envthes: ;
-  iadopt:hasObjectOfInterest <http://purl.jp/bio/4/id/200906090403689217> ;
+  iadopt:hasObjectOfInterest <http://opendata.inrae.fr/thesaurusINRAE/c_6419> ;
+  iadopt:hasMatrix <http://purl.dataone.org/odo/ECSO_00000501> ;
   dc:modified "2024-10-14"^^xsd:date .
 
 iadopt:hasConstraint
