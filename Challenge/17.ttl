@@ -61,6 +61,6 @@ iadopt:hasConstraint
 
 envthes:10322
   skos:prefLabel "dry"@en ;
-  a iadopt:Constraint, skos:Concept 
+  a iadopt:Constraint, skos:Concept ;
   iadopt:constrains envthes:20929 .
 
