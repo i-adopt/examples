@@ -89,22 +89,28 @@ for await(const rawFilePath of Fs.glob( '**/*.ttl', { cwd: PATH_ROOT} ) ) {
       OPTIONAL { ?prop      ?labelProp    ?propLabel .        FILTER(LANG(?propLabel) = ""        || LANGMATCHES(LANG(?propLabel), "en") ) }
       OPTIONAL { ?prop      ?commentProp  ?propComment .      FILTER(LANG(?propComment) = ""      || LANGMATCHES(LANG(?propComment), "en") ) }
     }`, { sources: [store] });
+  function augmentEntity( base, ent, binding ) {
+    if( !(ent in base) ) {
+      // new entity
+      base[ent] = {
+        url:      binding.get( ent )?.value,
+        label:    binding.get( ent + 'Label' )?.value,
+        comment:  binding.get( ent + 'Comment' )?.value,
+      };
+    } else {
+      // existing entity -> only complete but do not overwrite
+      if( !base[ent].label && binding.get( ent + 'Label' )?.value ) {
+        base[ent].label = binding.get( ent + 'Label' )?.value;
+      }
+      if( !base[ent].comment && binding.get( ent + 'Comment' )?.value ) {
+        base[ent].comment = binding.get( ent + 'Comment' )?.value;
+      }
+    }
+  }
   for await (const binding of bindings) {
-    entry.variable = {
-      url:      binding.get( 'variable' )?.value,
-      label:    binding.get( 'variableLabel' )?.value,
-      comment:  binding.get( 'variableComment' )?.value,
-    };
-    entry.ooi = {
-      url:      binding.get( 'ooi' )?.value,
-      label:    binding.get( 'ooiLabel' )?.value,
-      comment:  binding.get( 'ooiComment' )?.value,
-    };
-    entry.prop = {
-      url:      binding.get( 'prop' )?.value,
-      label:    binding.get( 'propLabel' )?.value,
-      comment:  binding.get( 'propComment' )?.value,
-    };
+    augmentEntity( entry, 'variable', binding );
+    augmentEntity( entry, 'ooi', binding );
+    augmentEntity( entry, 'prop', binding );
   }
 
   // invalid file - no variable
@@ -270,8 +276,25 @@ for( const entry of data ) {
 renderView.sections.sort( (a,b) => a.folder.localeCompare( b.folder ) );
 renderView.sections.forEach( (section) => section.entries.sort( (a,b) => a.variable.label.localeCompare( b.variable.label ) ) );
 
+// fill up labels, where needed
+for( const entry of data ) {
+  const entities = [ entry.variable, entry.ooi, entry.prop, entry.matrix, ... (entry.context || []), ... (entry.constraints || []) ]
+    .filter( (e) => e )
+    .reduce( (all, e) => {
+      all[ e.url ] = e;
+      return all;
+    }, {} );
 
-// overview
+  for( const ent of Object.values( entities ) ) {
+    if( !ent.label ) {
+      const fragments = ent.url.split( '/' );
+      ent.label = fragments.pop() || fragments.pop() || '[missing label]';
+    }
+  }
+}
+
+
+// create overview
 let template = await Fs.readFile( Path.join( PATH_TMPL, 'index.mustache' ), 'utf8' );
 let rendered = Mustache.render( template, renderView );
 await Fs.writeFile( Path.join( PATH_DIST, 'index.html' ), rendered );
@@ -280,20 +303,12 @@ await Fs.writeFile( Path.join( PATH_DIST, 'index.html' ), rendered );
 template = await Fs.readFile( Path.join( PATH_TMPL, 'details.mustache' ), 'utf8' );
 for( const entry of data ) {
 
-  // fill up labels, where needed
-  const entities = [ entry.ooi, entry.prop, entry.matrix, ... (entry.context || []), ... (entry.constraints || []) ]
+  const entities = [ entry.variable, entry.ooi, entry.prop, entry.matrix, ... (entry.context || []), ... (entry.constraints || []) ]
     .filter( (e) => e )
     .reduce( (all, e) => {
       all[ e.url ] = e;
       return all;
     }, {} );
-  for( const ent of Object.values( entities ) ) {
-    if( !ent.label ) {
-      const fragments = ent.url.split( '/' );
-      ent.label = fragments.pop() || fragments.pop() || '[missing label]';
-    }
-
-  }
 
   // assign constraints
   entry.constraints = entry.constraints.filter( (cons) => {
@@ -313,6 +328,9 @@ for( const entry of data ) {
 
   });
 
+  // make sure we got the relative paths right
+  entry.relativePath = new Array( entry.path.length ).fill( '..' ).join( '/' );
+
   // render
   rendered = Mustache.render( template, entry );
 
@@ -321,7 +339,7 @@ for( const entry of data ) {
   try{
     await Fs.access( folder );
   } catch {
-    await Fs.mkdir( folder );
+    await Fs.mkdir( folder, { recursive: true } );
   }
   const path =  Path.join( folder, entry.file + '.html' );
   await Fs.writeFile( path, rendered );
@@ -335,7 +353,7 @@ for await(const filePath of Fs.glob( '**/!(*.mustache)', { cwd: PATH_TMPL } ) ) 
   try {
     await Fs.access( Path.dirname(target) );
   } catch {
-    await Fs.mkdir( Path.dirname( target ) );
+    await Fs.mkdir( Path.dirname( target ), { recursive: true } );
   }
   await Fs.copyFile(
     Path.join( PATH_TMPL, filePath ),
