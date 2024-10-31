@@ -2,6 +2,7 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix GrA: <http://www.groupA.org/iadopt/challenge1/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 
 
 GrA:1
@@ -23,12 +24,12 @@ GrA:1
     rdfs:label "Sun" ;
   ] ;
   iadopt:hasConstraint [
-    rdfs:label "specified_distance_and_direction_from_sun_surface" ; 
+    rdfs:label "specified_distance_and_direction_from_sun_surface" ;
   ] ;
  iadopt:hasConstraint [
-    rdfs:label "specified_location_of_observation" ; 
+    rdfs:label "specified_location_of_observation" ;
   ] ;
  iadopt:hasConstraint [
-    rdfs:label "specified_time_of_observation" ; 
+    rdfs:label "specified_time_of_observation" ;
   ] ;
   .

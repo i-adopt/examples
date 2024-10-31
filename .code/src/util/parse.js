@@ -14,7 +14,8 @@ export async function parseRDF( content ) {
     const result = await parseRDFN3( content );
     return result;
 
-  } catch {
+  } catch (e) {
+    console.log(e);
     try {
 
       // second attempt: RDF/XML
@@ -49,7 +50,13 @@ function parseRDFN3( content ) {
 
                     // content
                     if (quad) {
-                      store.add( quad );
+                      // remove subgraphs as they confuse queries later on
+                      store.add( N3.DataFactory.quad(
+                        quad.subject,
+                        quad.predicate,
+                        quad.object,
+                        N3.DataFactory.defaultGraph()
+                      ) );
                     } else {
                       resolve( store );
                     }
