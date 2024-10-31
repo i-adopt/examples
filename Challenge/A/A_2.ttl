@@ -1,0 +1,35 @@
+@prefix iadopt: <https://w3id.org/iadopt/ont/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix GrA: <http://www.groupA.org/iadopt/challenge1/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+
+GrA:2
+  a           iadopt:Variable ;
+  skos:prefLabel  "surface air temperature daily maximum"@en ;
+  skos:altLabel "daily maximum surface temperature of the air"@en ;
+  skos:definition "Daily maximum temperature of the air at a specified distance from a specified reference surface."@en ;
+  iadopt:hasObjectOfInterest <http://codes.wmo.int/wmdr/Domain> [
+    rdfs:label "solar wind electron" ;
+  ] ;
+  iadopt:hasProperty <https://codes.wmo.int/wmdr/ObservedVariableAtmosphere/226> [
+    rdfs:label "number density" ;
+  ] ;
+  iadopt:hasMatrix <https://vocabulary.actris.nilu.no/skosmos/actris_vocab/en/page/atmosphericstate> [
+    rdfs:label "solar wind" ;
+  ] ;
+ iadopt:hasContextObject <https://codes.wmo.int/wmdr/Domain/space> ;
+ iadopt:hasContextObject [
+    rdfs:label "atmosphere" ;
+  ] ;
+  iadopt:hasConstraint [
+    rdfs:label "distance from reference surface" ;
+  ] ;
+ iadopt:hasConstraint <https://codes.wmo.int/wmdr/ReferenceSurfaceType> [
+    rdfs:label "type of reference surface" ;
+  ] ;
+ iadopt:hasConstraint [
+    rdfs:label "daily maximum" ;
+  ] ;
+  .
