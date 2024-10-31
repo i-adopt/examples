@@ -37,7 +37,7 @@ envthes:30391
   iadopt:hasObjectOfInterest <http://purl.bioontology.org/ontology/npo#NPO_199> ;
   iadopt:hasProperty <https://qudt.org/vocab/quantitykind/MassPerAreaTime> ;
   a skos:Concept, iadopt:Variable ;
-  skos:prefLabel "dose of applied nanomaterial internalised by a specific cell population"@en ;
+  skos:prefLabel "dose (mass) of applied nanomaterial internalised by a specific cell population"@en ;
   dc:modified "2024-10-14"^^xsd:date ;
   skos:definition "Relative mass flux density (mass per area per time) of nanomaterial internalised by cells per unit time and specific cell surface area."@en ;
   iadopt:hasMatrix <http://purl.obolibrary.org/obo/GSSO_005261> ;
