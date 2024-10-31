@@ -11,16 +11,17 @@
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
 
-    <http://vocabs.lter-europe.net/EnvThes/30346> a <https://w3id.org/iadopt/ont/Constraint> ;
-        <https://w3id.org/iadopt/ont/constrains> <http://vocabs.lter-europe.net/EnvThes/30264> .
+<http://vocabs.lter-europe.net/EnvThes/30346> a <https://w3id.org/iadopt/ont/Constraint> ;
+    <https://w3id.org/iadopt/ont/constrains> <http://vocabs.lter-europe.net/EnvThes/30264> .
 
-    <http://vocabs.lter-europe.net/EnvThes/30351> dct:description "depth of water body of a lake, which is described also as stagnant surface water and freshwater" ;
-        a <https://w3id.org/iadopt/ont/Variable> ;
-        rdfs:label "depth of water body in lake, stagnant surface water" ;
-        rdfs:seeAlso <https://blog.aem.eco/fundamentals_of_water_level_measurement> ;
-        <https://w3id.org/iadopt/ont/hasConstraint> <http://vocabs.lter-europe.net/EnvThes/30346> ;
-        <https://w3id.org/iadopt/ont/hasContextObject> <http://vocabs.lter-europe.net/EnvThes/30264> ;
-        <https://w3id.org/iadopt/ont/hasMatrix> <http://purl.obolibrary.org/obo/ENVO_00000020> ;
-        <https://w3id.org/iadopt/ont/hasObjectOfInterest> <http://vocab.nerc.ac.uk/collection/S26/current/MAT00640> ;
-        <https://w3id.org/iadopt/ont/hasProperty> <http://qudt.org/vocab/quantitykind/Depth> .
+<http://vocabs.lter-europe.net/EnvThes/30351>
+    dct:description "depth of water body of a lake, which is described also as stagnant surface water and freshwater" ;
+    a <https://w3id.org/iadopt/ont/Variable> ;
+    rdfs:label "depth of water body in lake, stagnant surface water" ;
+    rdfs:seeAlso <https://blog.aem.eco/fundamentals_of_water_level_measurement> ;
+    <https://w3id.org/iadopt/ont/hasConstraint> <http://vocabs.lter-europe.net/EnvThes/30346> ;
+    <https://w3id.org/iadopt/ont/hasContextObject> <http://vocabs.lter-europe.net/EnvThes/30264> ;
+    <https://w3id.org/iadopt/ont/hasMatrix> <http://purl.obolibrary.org/obo/ENVO_00000020> ;
+    <https://w3id.org/iadopt/ont/hasObjectOfInterest> <http://vocab.nerc.ac.uk/collection/S26/current/MAT00640> ;
+    <https://w3id.org/iadopt/ont/hasProperty> <http://qudt.org/vocab/quantitykind/Depth> .
 

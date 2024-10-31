@@ -1,0 +1,35 @@
+@prefix iadopt: <https://w3id.org/iadopt/ont/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix GrA: <http://www.groupA.org/iadopt/challenge1/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+
+GrA:1
+  a           iadopt:Variable ;
+  skos:prefLabel  "electron density in the solar wind"@en ;
+  skos:altLabel "number_density of electrons in the solar_wind at specified_distance_and_direction_from_sun_surface"@en ;
+  skos:definition "number density (particle per volume) of electrons in the solar wind (the stream of charged particles emitted by the Sun) at specified distance and direction from the Sun's surface."@en ;
+  iadopt:hasObjectOfInterest [
+    rdfs:label "solar_wind_electron" ;
+  ] ;
+  iadopt:hasProperty [
+    rdfs:label "number_density" ;
+  ] ;
+  iadopt:hasMatrix [
+    rdfs:label "Solar Wind" ;
+  ] ;
+ iadopt:hasContextObject <https://codes.wmo.int/wmdr/Domain/space> ;
+ iadopt:hasContextObject [
+    rdfs:label "Sun" ;
+  ] ;
+  iadopt:hasConstraint [
+    rdfs:label "specified_distance_and_direction_from_sun_surface" ;
+  ] ;
+ iadopt:hasConstraint [
+    rdfs:label "specified_location_of_observation" ;
+  ] ;
+ iadopt:hasConstraint [
+    rdfs:label "specified_time_of_observation" ;
+  ] ;
+  .
