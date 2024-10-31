@@ -89,24 +89,6 @@ for await(const rawFilePath of Fs.glob( '**/*.ttl', { cwd: PATH_ROOT} ) ) {
       OPTIONAL { ?prop      ?labelProp    ?propLabel .        FILTER(LANG(?propLabel) = ""        || LANGMATCHES(LANG(?propLabel), "en") ) }
       OPTIONAL { ?prop      ?commentProp  ?propComment .      FILTER(LANG(?propComment) = ""      || LANGMATCHES(LANG(?propComment), "en") ) }
     }`, { sources: [store] });
-  function augmentEntity( base, ent, binding ) {
-    if( !(ent in base) ) {
-      // new entity
-      base[ent] = {
-        url:      binding.get( ent )?.value,
-        label:    binding.get( ent + 'Label' )?.value,
-        comment:  binding.get( ent + 'Comment' )?.value,
-      };
-    } else {
-      // existing entity -> only complete but do not overwrite
-      if( !base[ent].label && binding.get( ent + 'Label' )?.value ) {
-        base[ent].label = binding.get( ent + 'Label' )?.value;
-      }
-      if( !base[ent].comment && binding.get( ent + 'Comment' )?.value ) {
-        base[ent].comment = binding.get( ent + 'Comment' )?.value;
-      }
-    }
-  }
   for await (const binding of bindings) {
     augmentEntity( entry, 'variable', binding );
     augmentEntity( entry, 'ooi', binding );
@@ -138,18 +120,14 @@ for await(const rawFilePath of Fs.glob( '**/*.ttl', { cwd: PATH_ROOT} ) ) {
 
     if( binding.get( 'prop' ).value == NS.iop + 'hasMatrix' ) {
 
-      entry.matrix = {
-        url:      binding.get( 'value' )?.value,
-        label:    binding.get( 'label' )?.value,
-        comment:  binding.get( 'comment' )?.value,
-      };
+      augmentEntity( entry, 'matrix', binding, false );
 
     } else {
 
       entry.contextLookup = entry.contextLookup || {};
       const url = binding.get( 'value' )?.value;
       entry.contextLookup[ url ] = entry.contextLookup[ url ] || {};
-      entry.contextLookup[ url ].url     = entry.contextLookup[ url ].url     || binding.get( 'value' )?.value;
+      entry.contextLookup[ url ].url     = entry.contextLookup[ url ].url     || (binding.get('value').termType == 'BlankNode' ? null : binding.get( 'value' )?.value );
       entry.contextLookup[ url ].label   = entry.contextLookup[ url ].label   || binding.get( 'label' )?.value;
       entry.contextLookup[ url ].comment = entry.contextLookup[ url ].comment || binding.get( 'comment' )?.value;
 
@@ -179,7 +157,7 @@ for await(const rawFilePath of Fs.glob( '**/*.ttl', { cwd: PATH_ROOT} ) ) {
     entry.constraintLookup = entry.constraintLookup || {};
     const url = binding.get( 'constraint' )?.value;
     entry.constraintLookup[ url ] = entry.constraintLookup[ url ] || {};
-    entry.constraintLookup[ url ].url     = entry.constraintLookup[ url ].url     || binding.get( 'constraint' )?.value;
+    entry.constraintLookup[ url ].url     = entry.constraintLookup[ url ].url     || (binding.get('constraint').termType == 'BlankNode' ? null : binding.get( 'constraint' )?.value);
     entry.constraintLookup[ url ].label   = entry.constraintLookup[ url ].label   || binding.get( 'label' )?.value;
     entry.constraintLookup[ url ].comment = entry.constraintLookup[ url ].comment || binding.get( 'comment' )?.value;
     entry.constraintLookup[ url ].target  = entry.constraintLookup[ url ].target  || binding.get( 'target' )?.value;
@@ -232,13 +210,15 @@ for await(const rawFilePath of Fs.glob( '**/*.ttl', { cwd: PATH_ROOT} ) ) {
     });
   }
   for( const c of entry.constraints ) {
-    entry.jsonLD.constraint.push({
-      '@type': [ 'https://w3id.org/iadopt/ont/Entity' ],
-      '@id':    c.url,
-      label:    c.label,
-      comment:  c.comment,
-      constrains: [ c.target ],
-    });
+    if( c.target ) {
+      entry.jsonLD.constraint.push({
+        '@type': [ 'https://w3id.org/iadopt/ont/Entity' ],
+        '@id':    c.url,
+        label:    c.label,
+        comment:  c.comment,
+        constrains: [ c.target ],
+      });
+    }
   }
   entry.jsonLDencoded = encodeURIComponent( JSON.stringify( entry.jsonLD ) );
 
@@ -272,9 +252,6 @@ for( const entry of data ) {
 
 }
 
-// sort entries
-renderView.sections.sort( (a,b) => a.folder.localeCompare( b.folder ) );
-renderView.sections.forEach( (section) => section.entries.sort( (a,b) => a.variable.label.localeCompare( b.variable.label ) ) );
 
 // fill up labels, where needed
 for( const entry of data ) {
@@ -293,6 +270,9 @@ for( const entry of data ) {
   }
 }
 
+// sort entries
+renderView.sections.sort( (a,b) => a.folder.localeCompare( b.folder ) );
+renderView.sections.forEach( (section) => section.entries.sort( (a,b) => a.variable.label.localeCompare( b.variable.label ) ) );
 
 // create overview
 let template = await Fs.readFile( Path.join( PATH_TMPL, 'index.mustache' ), 'utf8' );
@@ -366,4 +346,30 @@ for( const entry of data ) {
     Path.join( PATH_ROOT, ... entry.path, entry.file ),
     Path.join( PATH_DIST, ... entry.path, entry.file ),
   );
+}
+
+
+/* XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX Helper XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX */
+
+function augmentEntity( base, ent, binding, entInBinding = true ) {
+  if( !(ent in base) ) {
+    // new entity
+    base[ent] = {
+      url:      binding.get( entInBinding ? ent             : 'value' )?.value,
+      label:    binding.get( entInBinding ? ent + 'Label'   : 'label' )?.value,
+      comment:  binding.get( entInBinding ? ent + 'Comment' : 'comment' )?.value,
+    };
+    // remove URLs for blank nodes
+    if( binding.get( entInBinding ? ent : 'value' )?.termType == 'BlankNode' ){
+      base[ent].url = null;
+    }
+  } else {
+    // existing entity -> only complete but do not overwrite
+    if( !base[ent].label && binding.get( ent + 'Label' )?.value ) {
+      base[ent].label = binding.get( ent + 'Label' )?.value;
+    }
+    if( !base[ent].comment && binding.get( ent + 'Comment' )?.value ) {
+      base[ent].comment = binding.get( ent + 'Comment' )?.value;
+    }
+  }
 }

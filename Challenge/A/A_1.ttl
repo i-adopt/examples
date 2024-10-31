@@ -7,7 +7,7 @@
 
 GrA:1
   a           iadopt:Variable ;
-  skos:preLabel  "electron density in the solar wind"@en ;
+  skos:prefLabel  "electron density in the solar wind"@en ;
   skos:altLabel "number_density of electrons in the solar_wind at specified_distance_and_direction_from_sun_surface"@en ;
   skos:definition "number density (particle per volume) of electrons in the solar wind (the stream of charged particles emitted by the Sun) at specified distance and direction from the Sun's surface."@en ;
   iadopt:hasObjectOfInterest [

@@ -21,7 +21,14 @@
     <section>
       <h3>Property:</h3>
       <dl>
-        <dt><a href="{{prop.url}}">{{prop.label}}</a></dt>
+        <dt>
+          {{#prop.url}}
+            <a href="{{prop.url}}">{{prop.label}}</a>
+          {{/prop.url}}
+          {{^prop.url}}
+            {{prop.label}}
+          {{/prop.url}}
+        </dt>
         <dd class="description">{{prop.comment}}</dd>
       </dl>
     </section>
@@ -29,7 +36,14 @@
     <section>
       <h3>Object of Interest:</h3>
       <dl>
-        <dt><a href="{{ooi.url}}">{{ooi.label}}</a></dt>
+        <dt>
+          {{#ooi.url}}
+            <a href="{{ooi.url}}">{{ooi.label}}</a>
+          {{/ooi.url}}
+          {{^ooi.url}}
+            {{ooi.label}}
+          {{/ooi.url}}
+        </dt>
         <dd class="description">{{ooi.comment}}</dd>
         {{#ooi.constraints.length}}
           <dt>Constraints</dt>
@@ -51,7 +65,14 @@
     <section>
       <h3>Matrix:</h3>
       <dl>
-        <dt><a href="{{url}}">{{label}}</a></dt>
+        <dt>
+          {{#url}}
+            <a href="{{url}}">{{label}}</a>
+          {{/url}}
+          {{^url}}
+            {{label}}
+          {{/url}}
+        </dt>
         <dd class="description">{{comment}}</dd>
         {{#matrix.constraints.length}}
           <dt>Constraints</dt>
@@ -75,7 +96,14 @@
       <h3>Context Objects:</h3>
       <dl>
         {{#context}}
-        <dt><a href="{{url}}">{{label}}</a></dt>
+        <dt>
+          {{#url}}
+            <a href="{{url}}">{{label}}</a>
+          {{/url}}
+          {{^url}}
+            {{label}}
+          {{/url}}
+        </dt>
         <dd class="description">{{comment}}</dd>
         {{#constrained.length}}
           <dt>Constraints</dt>
@@ -100,7 +128,14 @@
       <h3>Unassigned Constraints:</h3>
       <dl>
         {{#constraints}}
-        <dt><a href="{{url}}">{{label}}</a></dt>
+        <dt>
+          {{#url}}
+            <a href="{{url}}">{{label}}</a>
+          {{/url}}
+          {{^url}}
+            {{label}}
+          {{/url}}
+        </dt>
         <dd class="description">{{comment}}</dd>
         {{/constraints}}
       </dl>
