@@ -31,7 +31,7 @@ envthes:
 envthes:21994
   skos:prefLabel "minimum"@en ;
   a iadopt:Constraint, skos:Concept ;
-  iadopt:constrains et:21543 .
+  iadopt:constrains envthes:21543 .
 
 iadopt:hasObjectOfInterest
   rdfs:comment "A Variable has an Entity whose Property is observed." ;
