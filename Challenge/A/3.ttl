@@ -16,7 +16,7 @@
 
     <http://vocabs.lter-europe.net/EnvThes/30351> dct:description "depth of water body of a lake, which is described also as stagnant surface water and freshwater" ;
         a <https://w3id.org/iadopt/ont/Variable> ;
-        rdfs:label "depth of water body in lake, stagnant surface water", "water level in lake, stagnant surface water" ;
+        rdfs:label "depth of water body in lake, stagnant surface water" ;
         rdfs:seeAlso <https://blog.aem.eco/fundamentals_of_water_level_measurement> ;
         <https://w3id.org/iadopt/ont/hasConstraint> <http://vocabs.lter-europe.net/EnvThes/30346> ;
         <https://w3id.org/iadopt/ont/hasContextObject> <http://vocabs.lter-europe.net/EnvThes/30264> ;
