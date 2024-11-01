@@ -4,7 +4,6 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 
-
 GrA:3
   a           iadopt:Variable ;
   skos:prefLabel  "mixed layer height"@en ;
@@ -22,8 +21,8 @@ turbulent mixing, resulting in weak vertical gradients"@en ;
   iadopt:hasMatrix [
     rdfs:label "atmospheric state" ;
   ] ;
- iadopt:hasContextObject <http://codes.wmo.int/wmdr/Domain> ;
- iadopt:hasContextObject [
+  iadopt:hasContextObject <http://codes.wmo.int/wmdr/Domain> ;
+  iadopt:hasContextObject [
     rdfs:label "atmosphere" ;
   ] ;
   iadopt:hasConstraint [
