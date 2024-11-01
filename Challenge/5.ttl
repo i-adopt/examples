@@ -13,7 +13,7 @@ envthes:20935
 
 envthes:20887
   skos:prefLabel "materia organica"@it, "materie organică"@ro, "orgaaninen aine"@fi, "organisk materiale"@no, "substancja ograniczna"@pl, "organiska viela"@lv, "Органичен материал"@bg, "有機物"@ja, "organinė medžiaga"@lt, "organické látky"@sk, "organska tvar"@hr, "organisk stof"@da, "matéria orgânica"@pt, "materia orgánica"@es, "Organische Substanz"@de, "szerves anyag"@hu, "οργανική ύλη"@el, "organic matter"@en, "orgaaniline aine"@et, "organska snov"@sl, "organische stof"@nl, "matière organique"@fr, "有机质"@zh, "látka organická"@cs, "organiskt material"@sv, "مادة عضوية"@ar ;
-  a skos:Concept, iadopt:Constraint 
+  a skos:Concept, iadopt:Constraint ;
   iadopt:constrains envthes:30361 .
 
 iadopt:Variable
