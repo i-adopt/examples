@@ -22,7 +22,7 @@ GrA:2
   iadopt:hasMatrix [
     rdfs:label "atmospheric state" ;
   ] ;
- iadopt:hasContextObject <https://codes.wmo.int/wmdr/Domain/space> ;
+ iadopt:hasContextObject <https://codes.wmo.int/wmdr/Domain> ;
  iadopt:hasContextObject [
     rdfs:label "atmosphere" ;
   ] ;
