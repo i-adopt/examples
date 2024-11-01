@@ -22,7 +22,7 @@ GrA:3
   iadopt:hasMatrix [
     rdfs:label "cloud phase" ;
   ] ;
- iadopt:hasContextObject <https://codes.wmo.int/wmdr/Domain/space> ;
+ iadopt:hasContextObject <https://codes.wmo.int/wmdr/Domain> ;
  iadopt:hasContextObject [
     rdfs:label "atmosphere" ;
   ] ;
