@@ -10,14 +10,17 @@ GrA:2
   skos:prefLabel  "surface air temperature daily maximum"@en ;
   skos:altLabel "daily maximum surface temperature of the air"@en ;
   skos:definition "Daily maximum temperature of the air at a specified distance from a specified reference surface."@en ;
-  iadopt:hasObjectOfInterest <http://codes.wmo.int/wmdr/Domain> [
-    rdfs:label "solar wind electron" ;
+  iadopt:hasObjectOfInterest <http://codes.wmo.int/wmdr/Domain> ;
+  iadopt:hasObjectOfInterest [
+    rdfs:label "atmosphere" ;
   ] ;
-  iadopt:hasProperty <https://codes.wmo.int/wmdr/ObservedVariableAtmosphere/226> [
-    rdfs:label "number density" ;
+  iadopt:hasProperty <https://codes.wmo.int/wmdr/ObservedVariableAtmosphere/226> ;
+  iadopt:hasProperty[
+    rdfs:label "extreme temperature (min, max) (at specified distance from reference surface)" ;
   ] ;
-  iadopt:hasMatrix <https://vocabulary.actris.nilu.no/skosmos/actris_vocab/en/page/atmosphericstate> [
-    rdfs:label "solar wind" ;
+  iadopt:hasMatrix <https://vocabulary.actris.nilu.no/skosmos/actris_vocab/en/page/atmosphericstate> ; 
+  iadopt:hasMatrix [
+    rdfs:label "atmospheric state" ;
   ] ;
  iadopt:hasContextObject <https://codes.wmo.int/wmdr/Domain/space> ;
  iadopt:hasContextObject [
@@ -26,7 +29,8 @@ GrA:2
   iadopt:hasConstraint [
     rdfs:label "distance from reference surface" ;
   ] ;
- iadopt:hasConstraint <https://codes.wmo.int/wmdr/ReferenceSurfaceType> [
+ iadopt:hasConstraint <https://codes.wmo.int/wmdr/ReferenceSurfaceType> ;
+ iadopt:hasConstraint [
     rdfs:label "type of reference surface" ;
   ] ;
  iadopt:hasConstraint [
