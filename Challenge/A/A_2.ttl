@@ -16,7 +16,7 @@ GrA:2
   ] ;
   iadopt:hasProperty <https://codes.wmo.int/wmdr/ObservedVariableAtmosphere/226> ;
   iadopt:hasProperty[
-    rdfs:label "extreme temperature (min, max) (at specified distance from reference surface)" ;
+    rdfs:label "extreme temperature" ;
   ] ;
   iadopt:hasMatrix <https://vocabulary.actris.nilu.no/skosmos/actris_vocab/en/page/atmosphericstate> ; 
   iadopt:hasMatrix [
