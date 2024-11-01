@@ -28,5 +28,5 @@ turbulent mixing, resulting in weak vertical gradients"@en ;
   ] ;
   iadopt:hasConstraint [
     rdfs:label "aboveground" ;
-  ] 
+  ] ;
   .
