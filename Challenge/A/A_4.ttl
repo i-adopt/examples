@@ -9,7 +9,7 @@ GrA:3
   skos:prefLabel  "mixed layer height"@en ;
   skos:altLabel "height of mixed layer of the atmosphere above ground"@en ;
   skos:definition "Height above the surface to which atmospheric properties (wind speed, etc.) or atmospheric constituents (aerosol, trace gases) are dispersed by 
-turbulent mixing, resulting in weak vertical gradients"@en ;
+turbulent mixing, resulting in weak vertical gradients."@en ;
   iadopt:hasObjectOfInterest <https://glossarytest.ametsoc.net/wiki/Atmospheric_boundary_layer> ;
   iadopt:hasObjectOfInterest [
     rdfs:label "atmospheric boundary layer" ;
