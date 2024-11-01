@@ -15,7 +15,7 @@ turbulent mixing, resulting in weak vertical gradients"@en ;
   iadopt:hasObjectOfInterest [
     rdfs:label "atmospheric boundary layer" ;
   ] ;
-  iadopt:hasProperty[
+  iadopt:hasProperty [
     rdfs:label "height" ;
   ] ;
   iadopt:hasMatrix <https://vocabulary.actris.nilu.no/skosmos/actris_vocab/en/page/atmosphericstate> ; 
