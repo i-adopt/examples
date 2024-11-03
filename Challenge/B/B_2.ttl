@@ -19,21 +19,17 @@ GrB:2
 .
 
 <http://vocabs.lter-europe.net/EnvThes/21524>
-  a          iadopt:Property ;
   rdfs:label "temperature"@en ;
   .
 
 <http://vocabs.lter-europe.net/EnvThes/23>
-  a          iadopt:Entity ;
   rdfs:label "air"@en ;
   .
 
 <http://vocabs.lter-europe.net/EnvThes/21920>
-  a          iadopt:Entity ;
   rdfs:label "atmosphere"@en ;
   .
 
 <http://data.europa.eu/cpv/cpvsuppl/GB01>
-  a          iadopt:Constraint ;
   rdfs:label "daily"@en ;
 .
