@@ -15,7 +15,7 @@ GrB:2
   iadopt:hasProperty <http://vocabs.lter-europe.net/EnvThes/21524> ;
   iadopt:hasObjectOfInterest <http://vocabs.lter-europe.net/EnvThes/23> ;
   iadopt:hasContextObject <http://vocabs.lter-europe.net/EnvThes/21920> ;
-  iadopt:hasConstraint http://data.europa.eu/cpv/cpvsuppl/GB01 ;
+  iadopt:hasConstraint <http://data.europa.eu/cpv/cpvsuppl/GB01> ;
 .
 
 <http://vocabs.lter-europe.net/EnvThes/21524>
