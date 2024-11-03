@@ -1,0 +1,29 @@
+@prefix iadopt: <https://w3id.org/iadopt/ont/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix GrA: <http://www.groupA.org/iadopt/challenge1/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+
+GrA:3
+  a           iadopt:Variable ;
+  skos:prefLabel  "Electron Density in the Solar Wind"@en ;
+  skos:altLabel "Density of Electrons in Solar Wind"@en ;
+  skos:definition "The number of electrons found in a cubic centimeter (cm3) of the Solar Wind."@en ;
+  iadopt:hasObjectOfInterest <http://www.yso.fi/onto/yso/p12043> ;
+  iadopt:hasObjectOfInterest [
+    rdfs:label "Solar Wind" ;
+  ] ;
+  iadopt:hasProperty <http://purl.obolibrary.org/obo/FBbi_00000315> ;
+  iadopt:hasProperty[
+    rdfs:label "Electron Density" ;
+  ] ;
+  iadopt:hasMatrix <http://purl.obolibrary.org/obo/ENVO_01000637> ; 
+  iadopt:hasMatrix [
+    rdfs:label "outer space" ;
+  ] ;
+ iadopt:hasContextObject <http://purl.obolibrary.org/obo/ENVO_01001080> ;
+ iadopt:hasContextObject [
+    rdfs:label "Space Weather" ;
+  ] ;
+  .
