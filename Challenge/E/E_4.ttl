@@ -26,16 +26,16 @@
 <https://w3id.org/np/RAru2Kk-a5H7IA1WBdqffwa3TKkYVLoBjjjtPivtncazQ> <https://w3id.org/np/o/ntemplate/wasCreatedFromTemplate> <https://w3id.org/np/RAGUWnXKhfKYwmMoDK-LVXlEnnGdAuzFZKR9FZsXHJsxQ> <https://w3id.org/np/RAru2Kk-a5H7IA1WBdqffwa3TKkYVLoBjjjtPivtncazQ#pubinfo> .
 
 <http://vocab.nerc.ac.uk/collection/S06/current/S0600264/>
-  a          iadopt:Property ;
+  a          <https://w3id.org/iadopt/ont/Property> ;
   rdfs:label "Height"@en ;
   .
 
 <https://www.eionet.europa.eu/gemet/en/concept/976>
-  a          iadopt:Entity ;
+  a          <https://w3id.org/iadopt/ont/Entity> ;
   rdfs:label "boundary layer"@en ;
   .
 
 <http://vocab.nerc.ac.uk/collection/S26/current/MAT00843/>
-  a          iadopt:Entity ;
+  a           <https://w3id.org/iadopt/ont/Entity> ;
   rdfs:label "atmosphere"@en ;
   .
