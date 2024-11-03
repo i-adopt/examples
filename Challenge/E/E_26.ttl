@@ -40,6 +40,5 @@
   .
 
 <http://vocab.nerc.ac.uk/collection/S27/current/CS003313/>
-  a iadopt:Entity ;
   rdfs:label "gold"@en ;
   .
