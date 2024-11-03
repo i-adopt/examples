@@ -1,3 +1,11 @@
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix iadopt: <https://w3id.org/iadopt/ont/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix GrB: <http://www.groupA.org/iadopt/challengeB/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
 <https://w3id.org/np/RAru2Kk-a5H7IA1WBdqffwa3TKkYVLoBjjjtPivtncazQ> <http://www.nanopub.org/nschema#hasAssertion> <https://w3id.org/np/RAru2Kk-a5H7IA1WBdqffwa3TKkYVLoBjjjtPivtncazQ#assertion> <https://w3id.org/np/RAru2Kk-a5H7IA1WBdqffwa3TKkYVLoBjjjtPivtncazQ#Head> .
 <https://w3id.org/np/RAru2Kk-a5H7IA1WBdqffwa3TKkYVLoBjjjtPivtncazQ> <http://www.nanopub.org/nschema#hasProvenance> <https://w3id.org/np/RAru2Kk-a5H7IA1WBdqffwa3TKkYVLoBjjjtPivtncazQ#provenance> <https://w3id.org/np/RAru2Kk-a5H7IA1WBdqffwa3TKkYVLoBjjjtPivtncazQ#Head> .
 <https://w3id.org/np/RAru2Kk-a5H7IA1WBdqffwa3TKkYVLoBjjjtPivtncazQ> <http://www.nanopub.org/nschema#hasPublicationInfo> <https://w3id.org/np/RAru2Kk-a5H7IA1WBdqffwa3TKkYVLoBjjjtPivtncazQ#pubinfo> <https://w3id.org/np/RAru2Kk-a5H7IA1WBdqffwa3TKkYVLoBjjjtPivtncazQ#Head> .
