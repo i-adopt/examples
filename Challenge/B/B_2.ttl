@@ -32,3 +32,8 @@ GrB:2
   a          iadopt:Entity ;
   rdfs:label "atmosphere"@en ;
   .
+
+<http://data.europa.eu/cpv/cpvsuppl/GB01>
+  a          iadopt:Constraint ;
+  rdfs:label "daily"@en ;
+.
