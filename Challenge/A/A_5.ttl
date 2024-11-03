@@ -1,11 +1,11 @@
 @prefix iadopt: <https://w3id.org/iadopt/ont/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix GrA: <http://www.groupA.org/iadopt/challenge1/> .
+@prefix GrA: <http://www.groupA.org/iadopt/challengeA/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 
 
-GrA:3
+GrA:5
   a           iadopt:Variable ;
   skos:prefLabel  "organic aerosol optical depth"@en ;
   skos:altLabel "optical depth of organic matter aerosol in the atmosphere"@en ;
