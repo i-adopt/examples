@@ -10,7 +10,6 @@
 <https://w3id.org/np/RAoiGjwa3wUmpdFQiuPR_fSvmV8X_PgHRb1eC7_ir3lPc#IAdoptChallenge2> <https://w3id.org/iadopt/ont/hasObjectOfInterest> <https://w3id.org/ozcar-theia/c_d57d0742> <https://w3id.org/np/RAoiGjwa3wUmpdFQiuPR_fSvmV8X_PgHRb1eC7_ir3lPc#assertion> .
 <https://w3id.org/np/RAoiGjwa3wUmpdFQiuPR_fSvmV8X_PgHRb1eC7_ir3lPc#IAdoptChallenge2> <https://w3id.org/iadopt/ont/hasProperty> <http://vocab.nerc.ac.uk/collection/S06/current/S0600082/> <https://w3id.org/np/RAoiGjwa3wUmpdFQiuPR_fSvmV8X_PgHRb1eC7_ir3lPc#assertion> .
 <https://w3id.org/ozcar-theia/c_bfb7c832> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/iadopt/ont/Constraint> <https://w3id.org/np/RAoiGjwa3wUmpdFQiuPR_fSvmV8X_PgHRb1eC7_ir3lPc#assertion> .
-<https://w3id.org/ozcar-theia/c_bfb7c832> <https://w3id.org/iadopt/ont/constrains> <http://vocab.nerc.ac.uk/collection/S06/current/S0600082/> <https://w3id.org/np/RAoiGjwa3wUmpdFQiuPR_fSvmV8X_PgHRb1eC7_ir3lPc#assertion> .
 <https://w3id.org/np/RAoiGjwa3wUmpdFQiuPR_fSvmV8X_PgHRb1eC7_ir3lPc#assertion> <http://www.w3.org/ns/prov#wasAttributedTo> <https://orcid.org/0000-0003-0148-7124> <https://w3id.org/np/RAoiGjwa3wUmpdFQiuPR_fSvmV8X_PgHRb1eC7_ir3lPc#provenance> .
 <https://orcid.org/0000-0003-0148-7124> <http://xmlns.com/foaf/0.1/name> "Samantha Blakeman" <https://w3id.org/np/RAoiGjwa3wUmpdFQiuPR_fSvmV8X_PgHRb1eC7_ir3lPc#pubinfo> .
 <https://w3id.org/np/RAoiGjwa3wUmpdFQiuPR_fSvmV8X_PgHRb1eC7_ir3lPc#sig> <http://purl.org/nanopub/x/hasAlgorithm> "RSA" <https://w3id.org/np/RAoiGjwa3wUmpdFQiuPR_fSvmV8X_PgHRb1eC7_ir3lPc#pubinfo> .
