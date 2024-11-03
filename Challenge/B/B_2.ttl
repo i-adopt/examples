@@ -36,5 +36,4 @@ GrB:2
 <http://data.europa.eu/cpv/cpvsuppl/GB01>
   a          iadopt:Constraint ;
   rdfs:label "daily"@en ;
-  iadopt:constrains <http://vocabs.lter-europe.net/EnvThes/21524> .
 .
