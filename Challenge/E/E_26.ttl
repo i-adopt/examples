@@ -36,7 +36,7 @@
 <https://w3id.org/np/RAtOcsiMroT2mjTGQfR-N6RnVRMQ80kQJ-_Dww9aj9uCY> <https://w3id.org/np/o/ntemplate/wasCreatedFromPubinfoTemplate> <http://purl.org/np/RAA2MfqdBCzmz9yVWjKLXNbyfBNcwsMmOqcNUxkk1maIM> <https://w3id.org/np/RAtOcsiMroT2mjTGQfR-N6RnVRMQ80kQJ-_Dww9aj9uCY#pubinfo> .
 <https://w3id.org/np/RAtOcsiMroT2mjTGQfR-N6RnVRMQ80kQJ-_Dww9aj9uCY> <https://w3id.org/np/o/ntemplate/wasCreatedFromPubinfoTemplate> <http://purl.org/np/RAh1gm83JiG5M6kDxXhaYT1l49nCzyrckMvTzcPn-iv90> <https://w3id.org/np/RAtOcsiMroT2mjTGQfR-N6RnVRMQ80kQJ-_Dww9aj9uCY#pubinfo> .
 <https://w3id.org/np/RAtOcsiMroT2mjTGQfR-N6RnVRMQ80kQJ-_Dww9aj9uCY> <https://w3id.org/np/o/ntemplate/wasCreatedFromTemplate> <https://w3id.org/np/RAGUWnXKhfKYwmMoDK-LVXlEnnGdAuzFZKR9FZsXHJsxQ> <https://w3id.org/np/RAtOcsiMroT2mjTGQfR-N6RnVRMQ80kQJ-_Dww9aj9uCY#pubinfo> .
-<http://purl.obolibrary.org/obo/FBbi_00000315>
+<https://w3id.org/ozcar-theia/c_6d042bb4>
   a <https://w3id.org/iadopt/ont/Property> ;
   rdfs:label "Resistance"@en ;
   .
