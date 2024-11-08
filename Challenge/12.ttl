@@ -33,6 +33,10 @@ iadopt:hasObjectOfInterest
   rdfs:comment "A Variable has an Entity whose Property is observed." ;
   rdfs:label "hasObjectOfInterest" .
 
+<https://www.wikidata.org/entity/Q683595>
+ skos:prefLabel "land parcel"@en ;
+ a iadopt:Entity, skos:Concept .
+
 envthes:10144
   skos:prefLabel "probability"@en ;
   a skos:Concept .
