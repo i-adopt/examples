@@ -38,7 +38,7 @@ envthes:10144
   a skos:Concept .
 
 <https://www.wikidata.org/entity/Q683595>
-  rdfs:label "outer space"@en ;
+  rdfs:label "land parcel"@en ;
   .
 
 <http://vocabs.lter-europe.net/elter_cl/10597>
