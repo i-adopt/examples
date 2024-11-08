@@ -37,6 +37,10 @@ envthes:10144
   skos:prefLabel "probability"@en ;
   a skos:Concept .
 
+<https://www.wikidata.org/entity/Q683595>
+ skos:prefLabel "land parcel"@en ;
+ a iadopt:Entity, skos:Concept .
+
 <http://vocabs.lter-europe.net/elter_cl/10597>
   skos:prefLabel "EUNIS"@en ;
   a iadopt:Constraint, skos:Concept ;
