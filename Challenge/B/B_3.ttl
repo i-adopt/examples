@@ -12,7 +12,7 @@ GrB:3
   skos:altLabel "cloud cover"@en ;
   skos:definition "The amount of cloudiness or clear sky at a study site."@en ;
   iadopt:hasProperty <http://vocabs.lter-europe.net/EnvThes/21519> ;
-  iadopt:hasObjectOfInterest <http://www.eionet.europa.eu/gemet/concept/1491 https://w3id.org/ozcar-theia/c_d8deb461> ;
+  iadopt:hasObjectOfInterest <http://www.eionet.europa.eu/gemet/concept/1491> ;
   iadopt:hasContextObject <https://vocabs.lter-europe.net/envthes/en/page/21920> ;
 .
 
@@ -21,7 +21,7 @@ GrB:3
   rdfs:label "cover"@en ;
   .
 
-<http://www.eionet.europa.eu/gemet/concept/1491 https://w3id.org/ozcar-theia/c_d8deb461>
+<http://www.eionet.europa.eu/gemet/concept/1491>
   a          iadopt:Entity ;
   rdfs:label "cloud"@en ;
   .
