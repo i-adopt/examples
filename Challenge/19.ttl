@@ -12,7 +12,11 @@ envthes:20935
   skos:narrower envthes:30403 .
 
 envthes:20929
-  skos:prefLabel "body"@en ;
+  rdfs:label "body"@en ;
+  a skos:Concept .
+
+<http://purl.obolibrary.org/obo/OBI_0100026>
+  rdfs:label "organism"@en ;
   a skos:Concept .
 
 iadopt:Variable
@@ -60,6 +64,6 @@ iadopt:hasConstraint
   rdfs:label "hasConstraint" .
 
 envthes:10322
-  skos:prefLabel "dry"@en ;
+  rdfs:label "dry"@en ;
   a iadopt:Constraint, skos:Concept ;
   iadopt:constrains envthes:20929 .
