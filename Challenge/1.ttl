@@ -12,7 +12,7 @@ envthes:20935
   skos:narrower envthes:30376 .
 
 <http://data.loterre.fr/ark:/67375/26L-ZTJ994X8-D>
-  skos:prefLabel "solar wind"@en ;
+  rdfs:label "solar wind"@en ;
   a skos:Concept .
 
 <http://purl.obolibrary.org/obo/CHEBI_10545>
