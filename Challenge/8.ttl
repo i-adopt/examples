@@ -29,7 +29,11 @@ envthes:
   a owl:Ontology, skos:ConceptScheme .
 
 envthes:30365
-  skos:prefLabel "ground"@en ;
+  rdfs:label "ground"@en ;
+  a skos:Concept .
+
+<https://lod.nal.usda.gov/nalt/104904>
+  rdfs:label "coarse woody debris"@en ;
   a skos:Concept .
 
 iadopt:hasObjectOfInterest
