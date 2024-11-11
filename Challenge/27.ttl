@@ -15,6 +15,10 @@ envthes:20935
   rdfs:label "poly(isobutylene)"@en ;
   a skos:Concept .
 
+<http://purl.obolibrary.org/obo/CHEBI_35255>
+  rdfs:label "chloroform"@en ;
+  a skos:Concept .
+
 iadopt:Variable
   rdfs:label "Variable" ;
   a owl:Class .
