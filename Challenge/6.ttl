@@ -43,10 +43,6 @@ iadopt:hasMatrix
   rdfs:comment "A Variable might have an Entity in which the ObjectOfInterest is contained." ;
   rdfs:label "hasMatrix" .
 
-<https://www.eionet.europa.eu/gemet/en/concept/1160>
-  rdfs:label "carbon" ;
-  a skos:Concept .
-
 <https://aims.fao.org/aos/agrovoc/c_14200>
   rdfs:label "senescence"@en ;
   a iadopt:Constraint, skos:Concept ;
