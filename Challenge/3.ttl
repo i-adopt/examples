@@ -47,7 +47,7 @@ iadopt:hasObjectOfInterest
   rdfs:label "hasObjectOfInterest" .
 
 envthes:30363
-  a skos:Concept :
+  a skos:Concept ;
   rdfs:label "sky"@en ;
 .
 
