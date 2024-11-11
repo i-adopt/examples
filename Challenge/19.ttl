@@ -15,6 +15,10 @@ envthes:20929
   rdfs:label "body"@en ;
   a skos:Concept .
 
+<https://www.eionet.europa.eu/gemet/en/concept/1160>
+  rdfs:label "carbon"@en ;
+  a skos:Concept .
+
 <http://purl.obolibrary.org/obo/OBI_0100026>
   rdfs:label "organism"@en ;
   a skos:Concept .
@@ -45,7 +49,7 @@ envthes:30403
   dc:creator <https://orcid.org/0000-0003-2195-3997> ;
   dc:created "2024-10-31"^^xsd:date ;
   skos:definition "The amount of carbon consumed by an organism at non-limiting concentration of food relative to the individual dry weight measured at 15°C."@en ;
-  iadopt:hasObjectOfInterest <https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:27594> ;
+  iadopt:hasObjectOfInterest <https://www.eionet.europa.eu/gemet/en/concept/1160> ;
   iadopt:hasProperty <http://qudt.org/vocab/quantitykind/MassFlowRate> ;
   skos:inScheme envthes: ;
   dc:modified "2024-10-31"^^xsd:date ;
