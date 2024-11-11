@@ -29,7 +29,7 @@ envthes:
   a owl:Ontology, skos:ConceptScheme .
 
 envthes:20591
-  rdfs:label "動物"@ja, "动物"@zh, "animals"@en ;
+  rdfs:label "animals"@en ;
   a skos:Concept .
 
 iadopt:hasObjectOfInterest
