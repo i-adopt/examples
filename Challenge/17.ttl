@@ -15,6 +15,10 @@ envthes:20935
   rdfs:label "docosahexanenoic acid"@en ;
   a skos:Concept .
 
+<http://purl.jp/bio/4/id/200906072291781478>
+  rdfs:label "individual"@en ;
+  a skos:Concept .
+
 envthes:20929
   rdfs:label "body"@en ;
   a skos:Concept .
