@@ -12,7 +12,7 @@ envthes:20935
   skos:narrower envthes:30387 .
 
 envthes:30367
-  skos:prefLabel "impacted by industry"@en ;
+  rdfs:label "impacted by industry"@en ;
   a iadopt:Constraint, skos:Concept ;
   iadopt:constrains envthes:24 .
 
@@ -24,8 +24,12 @@ iadopt:hasProperty
   rdfs:comment "A Variable has a Property that characterizes an Entity." ;
   rdfs:label "hasProperty" .
 
+<http://purl.obolibrary.org/obo/CHEBI_16130>
+  rdfs:label "DDT" ;
+  a skos:Concept .
+
 envthes:24
-  skos:prefLabel "sol"@ro, "sol"@fr, "soil"@en, "تربة"@ar, "muld"@et, "Boden"@de, "tlo"@hr, "maaperä"@fi, "půda"@cs, "dirvožemis, gruntas"@lt, "gleba"@pl, "pôda"@sk, "έδαφος"@el, "jord"@sv, "jord"@da, "suolo"@it, "suelos"@es, "solos"@pt, "Почва"@bg, "augsne"@lv, "tla, prst, zemlja"@sl, "jordsmonn"@no, "talaj"@hu, "bodem"@nl ;
+  rdfs:label "sol"@ro, "sol"@fr, "soil"@en, "تربة"@ar, "muld"@et, "Boden"@de, "tlo"@hr, "maaperä"@fi, "půda"@cs, "dirvožemis, gruntas"@lt, "gleba"@pl, "pôda"@sk, "έδαφος"@el, "jord"@sv, "jord"@da, "suolo"@it, "suelos"@es, "solos"@pt, "Почва"@bg, "augsne"@lv, "tla, prst, zemlja"@sl, "jordsmonn"@no, "talaj"@hu, "bodem"@nl ;
   a skos:Concept .
 
 iadopt:hasMatrix
@@ -35,7 +39,7 @@ iadopt:hasMatrix
 
 envthes:30387
   iadopt:hasObjectOfInterest <http://purl.obolibrary.org/obo/CHEBI_16130> ;
-  iadopt:hasProperty <http://qudt.org/vocab/quantitykind/MassConcentration> ;
+  iadopt:hasProperty <http://www.ontology-of-units-of-measure.org/resource/om-2/MassFraction> ;
   iadopt:hasConstraint envthes:30367 ;
   a skos:Concept, iadopt:Variable ;
   skos:broader envthes:20935 ;
