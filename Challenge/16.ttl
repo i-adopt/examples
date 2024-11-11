@@ -29,7 +29,7 @@ envthes:
   a owl:Ontology, skos:ConceptScheme .
 
 envthes:20591
-  skos:prefLabel "動物"@ja, "动物"@zh, "animals"@en ;
+  rdfs:label "動物"@ja, "动物"@zh, "animals"@en ;
   a skos:Concept .
 
 iadopt:hasObjectOfInterest
@@ -37,7 +37,7 @@ iadopt:hasObjectOfInterest
   rdfs:label "hasObjectOfInterest" .
 
 envthes:20850
-  skos:prefLabel "zuurstof"@nl, "oxigénio"@pt, "أكسجين"@ar, "tlen"@pl, "skābeklis"@lv, "hapnik"@et, "oxigen"@ro, "kisik"@sl, "kyslík"@sk, "kyslík"@cs, "kisik"@hr, "oksygen"@no, "oxygen"@en, "oxygen"@da, "oxygène"@fr, "oxigén"@hu, "Sauerstoff"@de, "deguonis"@lt, "ossigeno"@it, "happi"@fi, "Кислород"@bg, "syre"@sv, "οξυγόνο"@el, "oxígeno"@es ;
+  rdfs:label "zuurstof"@nl, "oxigénio"@pt, "أكسجين"@ar, "tlen"@pl, "skābeklis"@lv, "hapnik"@et, "oxigen"@ro, "kisik"@sl, "kyslík"@sk, "kyslík"@cs, "kisik"@hr, "oksygen"@no, "oxygen"@en, "oxygen"@da, "oxygène"@fr, "oxigén"@hu, "Sauerstoff"@de, "deguonis"@lt, "ossigeno"@it, "happi"@fi, "Кислород"@bg, "syre"@sv, "οξυγόνο"@el, "oxígeno"@es ;
   a skos:Concept .
 
 iadopt:hasConstraint
@@ -45,7 +45,7 @@ iadopt:hasConstraint
   rdfs:label "hasConstraint" .
 
 <http://purl.obolibrary.org/obo/XCO_0000002>
-  skos:prefLabel "resting"@en ;
+  rdfs:label "resting"@en ;
   a iadopt:Constraint, skos:Concept ;
   iadopt:constrains envthes:20591 .
 
