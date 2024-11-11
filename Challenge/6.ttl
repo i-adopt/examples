@@ -20,7 +20,7 @@ iadopt:hasProperty
   rdfs:label "hasProperty" .
 
 envthes:24
-  rdfs:label "sol"@ro, "sol"@fr, "soil"@en, "تربة"@ar, "muld"@et, "Boden"@de, "tlo"@hr, "maaperä"@fi, "půda"@cs, "dirvožemis, gruntas"@lt, "gleba"@pl, "pôda"@sk, "έδαφος"@el, "jord"@sv, "jord"@da, "suolo"@it, "suelos"@es, "solos"@pt, "Почва"@bg, "augsne"@lv, "tla, prst, zemlja"@sl, "jordsmonn"@no, "talaj"@hu, "bodem"@nl ;
+  rdfs:label "soil" ;
   a skos:Concept .
 
 envthes:30398
@@ -33,7 +33,7 @@ envthes:30398
   skos:broader envthes:20935 ;
   iadopt:hasContextObject envthes:20535 ;
   iadopt:hasConstraint <https://aims.fao.org/aos/agrovoc/c_14200> ;
-  iadopt:hasProperty <https://qudt.org/vocab/unit/KiloGM-PER-M2-SEC> ;
+  iadopt:hasProperty <https://qudt.org/vocab/quantitykind/MassPerAreaTime> ;
   dc:modified "2024-10-31"^^xsd:date ;
   iadopt:hasObjectOfInterest <https://www.eionet.europa.eu/gemet/en/concept/1160> ;
   skos:prefLabel "mass flux of carbon into soil from vegetation due to senescence"@en .
@@ -42,6 +42,10 @@ iadopt:hasMatrix
   rdfs:subPropertyOf iadopt:hasContextObject ;
   rdfs:comment "A Variable might have an Entity in which the ObjectOfInterest is contained." ;
   rdfs:label "hasMatrix" .
+
+<https://www.eionet.europa.eu/gemet/en/concept/1160>
+  rdfs:label "carbon" ;
+  a skos:Concept .
 
 <https://aims.fao.org/aos/agrovoc/c_14200>
   rdfs:label "senescence"@en ;
