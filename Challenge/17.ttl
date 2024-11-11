@@ -11,8 +11,12 @@ envthes:20935
   a skos:Concept ;
   skos:narrower envthes:30402 .
 
+<http://purl.obolibrary.org/obo/CHEBI_36005>
+  rdfs:label "docosahexanenoic acid"@en ;
+  a skos:Concept .
+
 envthes:20929
-  skos:prefLabel "body"@en ;
+  rdfs:label "body"@en ;
   a skos:Concept .
 
 iadopt:Variable
@@ -43,7 +47,7 @@ envthes:30402
   iadopt:hasConstraint envthes:10322 ;
   dc:creator <https://orcid.org/0000-0003-2195-3997> ;
   dc:created "2024-10-31"^^xsd:date ;
-  iadopt:hasProperty <http://qudt.org/vocab/quantitykind/MassConcentration> ;
+  iadopt:hasProperty <http://www.ontology-of-units-of-measure.org/resource/om-2/MassFraction> ;
   dc:modified "2024-10-31"^^xsd:date ;
   skos:prefLabel "mass concentration of docosahexaenoic acid per dry weight"@en .
 
@@ -60,7 +64,7 @@ iadopt:hasConstraint
   rdfs:label "hasConstraint" .
 
 envthes:10322
-  skos:prefLabel "dry"@en ;
+  rdfs:label "dry"@en ;
   a iadopt:Constraint, skos:Concept ;
   iadopt:constrains envthes:20929 .
 
