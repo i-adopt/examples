@@ -20,7 +20,7 @@ iadopt:hasProperty
   rdfs:label "hasProperty" .
 
 envthes:24
-  skos:prefLabel "sol"@ro, "sol"@fr, "soil"@en, "تربة"@ar, "muld"@et, "Boden"@de, "tlo"@hr, "maaperä"@fi, "půda"@cs, "dirvožemis, gruntas"@lt, "gleba"@pl, "pôda"@sk, "έδαφος"@el, "jord"@sv, "jord"@da, "suolo"@it, "suelos"@es, "solos"@pt, "Почва"@bg, "augsne"@lv, "tla, prst, zemlja"@sl, "jordsmonn"@no, "talaj"@hu, "bodem"@nl ;
+  rdfs:label "sol"@ro, "sol"@fr, "soil"@en, "تربة"@ar, "muld"@et, "Boden"@de, "tlo"@hr, "maaperä"@fi, "půda"@cs, "dirvožemis, gruntas"@lt, "gleba"@pl, "pôda"@sk, "έδαφος"@el, "jord"@sv, "jord"@da, "suolo"@it, "suelos"@es, "solos"@pt, "Почва"@bg, "augsne"@lv, "tla, prst, zemlja"@sl, "jordsmonn"@no, "talaj"@hu, "bodem"@nl ;
   a skos:Concept .
 
 envthes:30398
@@ -44,9 +44,13 @@ iadopt:hasMatrix
   rdfs:label "hasMatrix" .
 
 <https://aims.fao.org/aos/agrovoc/c_14200>
-  skos:prefLabel "senescence"@en ;
+  rdfs:label "senescence"@en ;
   a iadopt:Constraint, skos:Concept ;
   iadopt:constrains envthes:20535 .
+
+<https://www.eionet.europa.eu/gemet/en/concept/1160>
+  rdfs:label "carbon"@no ;
+  a skos:Concept .
 
 envthes:
   skos:prefLabel "EnvThes"@en ;
@@ -57,7 +61,7 @@ iadopt:hasObjectOfInterest
   rdfs:label "hasObjectOfInterest" .
 
 envthes:20535
-  skos:prefLabel "vegetasjon"@no, "植被"@zh, "Зеленина"@bg, "vegetácia"@sk, "المساحة المنزرعة"@ar, "vegetação"@pt, "vegetazione"@it, "vegetación"@es, "plantegroei"@nl, "taimkond"@et, "vegetáció"@hu, "vegetace"@cs, "augmenija"@lt, "roślinność"@pl, "végétation"@fr, "rastlinstvo, vegetacija"@sl, "veģetācija"@lv, "vegetaţie"@ro, "植生"@ja, "vegetation"@sv, "vegetation"@en, "vegetation"@da, "raslinje"@hr, "βλάστηση"@el, "kasvillisuus"@fi, "Vegetation"@de ;
+  rdfs:label "vegetasjon"@no, "植被"@zh, "Зеленина"@bg, "vegetácia"@sk, "المساحة المنزرعة"@ar, "vegetação"@pt, "vegetazione"@it, "vegetación"@es, "plantegroei"@nl, "taimkond"@et, "vegetáció"@hu, "vegetace"@cs, "augmenija"@lt, "roślinność"@pl, "végétation"@fr, "rastlinstvo, vegetacija"@sl, "veģetācija"@lv, "vegetaţie"@ro, "植生"@ja, "vegetation"@sv, "vegetation"@en, "vegetation"@da, "raslinje"@hr, "βλάστηση"@el, "kasvillisuus"@fi, "Vegetation"@de ;
   a skos:Concept .
 
 iadopt:hasContextObject
