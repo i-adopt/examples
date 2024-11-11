@@ -36,7 +36,7 @@ iadopt:hasObjectOfInterest
   a skos:Concept .
 
 <http://purl.dataone.org/odo/ECSO_00000501>
-  skos:prefLabel "tree"@en ;
+  rdfs:label "tree"@en ;
   a skos:Concept .
 
 envthes:30364
