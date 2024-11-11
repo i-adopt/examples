@@ -7,9 +7,13 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 envthes:20935
-  skos:prefLabel "variable"@en ;
+  rdfs:label "variable"@en ;
   a skos:Concept ;
   skos:narrower envthes:30394 .
+
+<http://purl.obolibrary.org/obo/CHEBI_53725>
+  rdfs:label "poly(isobutylene)"@en ;
+  a skos:Concept .
 
 iadopt:Variable
   rdfs:label "Variable" ;
