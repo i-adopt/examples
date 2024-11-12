@@ -43,7 +43,7 @@ envthes:30387
   iadopt:hasConstraint envthes:30367 ;
   a skos:Concept, iadopt:Variable ;
   skos:broader envthes:20935 ;
-  skos:definition "Mass concentration of DDT in a given year at a site impacted by industry."@en ;
+  skos:definition "Concentration of DDT in a given year at a site impacted by industry."@en ;
   skos:inScheme envthes: ;
   dc:modified "2024-10-14"^^xsd:date ;
   iadopt:hasMatrix envthes:24 ;
