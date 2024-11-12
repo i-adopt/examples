@@ -41,13 +41,13 @@ iadopt:hasObjectOfInterest
   rdfs:label "hasObjectOfInterest" .
 
 envthes:30394
-  skos:definition "The mass of isobutylene divided by the volume of the mixture of isobutylene and chloroform, expressed as mass per unit volume."@en ;
+  skos:definition "Mass concentration of isobutylene in chloroform."@en ;
   iadopt:hasObjectOfInterest <http://purl.obolibrary.org/obo/CHEBI_53725> ;
   a iadopt:Variable, skos:Concept ;
   skos:inScheme envthes: ;
   iadopt:hasProperty <http://qudt.org/vocab/quantitykind/MassConcentration> ;
   dc:created "2024-10-14"^^xsd:date ;
   iadopt:hasMatrix <http://purl.obolibrary.org/obo/CHEBI_35255> ;
-  skos:prefLabel "mass concentration of isobutylene in chloroform"@en ;
+  skos:prefLabel "Concentration of isobutylene"@en ;
   skos:broader envthes:20935 ;
   dc:modified "2024-10-14"^^xsd:date .
