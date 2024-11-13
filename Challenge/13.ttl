@@ -30,7 +30,7 @@ iadopt:hasObjectOfInterest
 
 envthes:30400
   a skos:Concept, iadopt:Variable ;
-  iadopt:hasContextObject envthes:21894 ;
+  iadopt:hasContextObject <http://purl.bioontology.org/ontology/LNC/LP73352-4> ;
   skos:inScheme envthes: ;
   skos:prefLabel "distance to nearest neighbour EUNIS habitat patch"@en ;
   skos:broader envthes:20935 ;
@@ -53,6 +53,9 @@ iadopt:hasConstraint
 envthes:21894
   skos:prefLabel "habitat"@en ;
   a skos:Concept .
+
+<http://purl.bioontology.org/ontology/LNC/LP73352-4>
+rdfs:label "site".
 
 envthes:30401
   skos:prefLabel "nearest neighbour"@en ;
