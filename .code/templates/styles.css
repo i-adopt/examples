@@ -29,7 +29,7 @@ body {
   color: #333;
   line-height: 1.6;
   display: grid;
-  grid-template-rows: 170px calc( 100% - 230px ) 60px;
+  grid-template-rows: 190px calc( 100% - 250px ) 60px;
   grid-template-areas: "top" "center" "bottom";
 }
 
@@ -106,4 +106,12 @@ footer {
   max-width: 1024px;
   width: 80vw;
   height: 50vh;
+}
+
+#filter {
+  width: 20em;
+  max-width: 80%;
+}
+.hidden {
+  display: none;
 }
