@@ -14,14 +14,14 @@
   function triggerFilter() {
 
     // get filter term
-    const term = document.querySelector( '#filter' )?.value || null;
+    const term = document.querySelector( '#filter' )?.value?.toLowerCase() || null;
 
     for( const entry of document.querySelectorAll( '.variable-item') ) {
 
       if( term ) {
 
         // only show, if filter term is included
-        if( ! entry.textContent?.includes( term ) ) {
+        if( ! entry.textContent?.toLowerCase().includes( term ) ) {
           entry.classList.add( 'hidden' );
         } else {
           entry.classList.remove( 'hidden' );
