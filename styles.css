@@ -112,3 +112,6 @@ footer {
   width: 20em;
   max-width: 80%;
 }
+.hidden {
+  display: none;
+}
