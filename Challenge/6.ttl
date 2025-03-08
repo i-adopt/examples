@@ -49,7 +49,7 @@ iadopt:hasMatrix
   iadopt:constrains envthes:20535 .
 
 <https://www.eionet.europa.eu/gemet/en/concept/1160>
-  rdfs:label "carbon"@no ;
+  rdfs:label "carbon"@en ;
   a skos:Concept .
 
 envthes:
