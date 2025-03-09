@@ -17,7 +17,7 @@ envthes:20935
   skos:narrower envthes:30208 .
 
 envthes:26
-  skos:prefLabel "organizmus"@sk, "organizam"@hr, "organisms"@lv, "organismos (taxonomia)"@pt, "organizem"@sl, "organismer"@da, "organismer"@sv, "szervezet"@hu, "organismus"@cs, "Οργανισμός"@el, "organismit"@fi, "Организъм"@bg, "Organismen"@de, "organismi (tassonomia)"@it, "organizmas"@lt, "organisme"@no, "organismen (taxonomie)"@nl, "organisme"@fr, "organizm"@pl, "كائن عضوي"@ar, "organism"@ro, "organism"@et, "organism"@en, "organismos"@es ;
+  skos:prefLabel "organism"@en ;
   a skos:Concept .
 
 iadopt:Variable
