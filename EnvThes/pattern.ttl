@@ -24,15 +24,6 @@ iadopt:Variable
   rdfs:label "Variable" ;
   a owl:Class .
 
-iadopt:hasProperty
-  rdfs:comment "A Variable has a Property that characterizes an Entity." ;
-  rdfs:label "hasProperty" .
-
-iadopt:hasMatrix
-  rdfs:subPropertyOf iadopt:hasContextObject ;
-  rdfs:comment "A Variable might have an Entity in which the ObjectOfInterest is contained." ;
-  rdfs:label "hasMatrix" .
-
 envthes:10073
   skos:prefLabel "concentration"@en ;
   a skos:Concept .
