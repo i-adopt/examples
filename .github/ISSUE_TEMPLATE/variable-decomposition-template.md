@@ -20,11 +20,17 @@ assignees: ''
 
 *Context Object(s) (label)*:
 
-*Constraint(s) (label) and which Entity it constraints*:
+*constrains (subproperty) (label)*: per unit
+
+*Constraint(s) (label) and which Entity it constraints*: volume 
+
+*Component instance it constrains*: number
 
 *Dimension Information*:
 
-*Applicable Unit(s)*:
+*Applicable Unit(s)*: cm-3
+
+*Pattern*: ratio, constraint on property
 
 *Link to a Publication of the Variable or Method*: 
 
