@@ -16,6 +16,10 @@
     .slice( 0, -1 )
     .map( () => '..' )
     .join( '/')
+
+  // determine selected section
+  const selectedSection = Object.keys( variables )
+    .find( (key) => variables[key].some( (v) => v.path == selected ) )
 </script>
 
 <div class="navBox">
@@ -24,7 +28,10 @@
     <ul>
       {#each Object.keys(variables) as section}
         <li>
-          <i>{section}</i>
+          <label for="checkBox{section}">
+            <i>{section}</i>
+          </label>
+          <input id="checkBox{section}" type="checkbox" checked={selectedSection == section} />
           <ul>
           {#each variables[section] as variable}
           <a href={(toBase ? `${toBase}/${variable.path}` : variable.path) + '.html'}>
@@ -48,6 +55,7 @@ ul ul {
   font-weight: bold;
 }
 
+
 .navBox {
   max-height: 100%;
   overflow: hidden;
@@ -57,5 +65,21 @@ ul ul {
 .navBoxBody {
   overflow-y: auto;
   overflow-x: hidden;
+}
+
+ul li:has( input[type="checkbox"]:checked ) {
+  list-style-type: disclosure-open;
+}
+label {
+  cursor: pointer;
+}
+input[type=checkbox] {
+  display: none;
+}
+:global( .navBox input[type="checkbox"] + ul ) {
+  display: none;
+}
+:global( .navBox input[type="checkbox"]:checked + ul ) {
+  display: block;
 }
 </style>

@@ -41,7 +41,17 @@ export async function getVariables() : Promise<{ [index: string]: Array<Variable
     }
 
     // get variable
-    const variable = await getVariable( rawFilePath );
+    let variable;
+    try {
+      variable = await getVariable( rawFilePath );
+    } catch( e ) {
+      console.error( rawFilePath + ' - ' + e.message );
+      continue;
+    }
+    if( !variable ) {
+      console.error( rawFilePath + ' - Could not extract variable!' );
+      continue;
+    }
 
     // add to results
     const entry = {
@@ -85,7 +95,10 @@ export async function getVariable( path: string ) : Promise<Variable> {
   const variable = (await extract( raw ))[0];
 
   // attempt to get the issue link
-  variable.issue = raw.match( /ex:issue "([^"]+)"/ )?.[1];
+  const issue = raw.match( /ex:issue "([^"]+)"/ )?.[1];
+  if( issue && variable ) {
+    variable.issue = issue;
+  }
 
   // memorize
   RAWS[ path ] = raw;
