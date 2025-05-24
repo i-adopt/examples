@@ -7,6 +7,7 @@ import type { Variable } from "$lib/util/model/models";
 
 // memoization
 const VARIABLES : { [index: string]: Variable } = {}
+const PARSER_ERRORS : { [index: string]: any } = {}
 const RAWS : { [index: string]: string } = {}
 
 
@@ -86,24 +87,36 @@ export async function getVariable( path: string ) : Promise<Variable> {
   if( path in VARIABLES ) {
     return VARIABLES[ path ];
   }
-
-  // path to file
-  const filePath = Path.join( PATH_ROOT, path );
-
-  // retrieve file content
-  const raw = await Fs.readFile( filePath, 'utf8' );
-  const variable = (await extract( raw ))[0];
-
-  // attempt to get the issue link
-  const issue = raw.match( /ex:issue "([^"]+)"/ )?.[1];
-  if( issue && variable ) {
-    variable.issue = issue;
+  if( path in PARSER_ERRORS ) {
+    throw PARSER_ERRORS[ path ];
   }
 
-  // memorize
-  RAWS[ path ] = raw;
-  VARIABLES[ path ] = variable;
-  return variable;
+  try {
+    // path to file
+    const filePath = Path.join( PATH_ROOT, path );
+
+    // retrieve file content
+    const raw = await Fs.readFile( filePath, 'utf8' );
+    const variable = (await extract( raw ))[0];
+
+    // attempt to get the issue link
+    const issue = raw.match( /ex:issue "([^"]+)"/ )?.[1];
+    if( issue && variable ) {
+      variable.issue = issue;
+    }
+
+    // memorize
+    RAWS[ path ] = raw;
+    VARIABLES[ path ] = variable;
+    return variable;
+
+  } catch( e ) {
+
+    // memorize error and pass on
+    PARSER_ERRORS[ path ] = e;
+    throw e;
+
+  }
 
 }
 
